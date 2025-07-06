@@ -1,4 +1,77 @@
-<p>This is a new repo.</p>
-<P>This is a new feature (Dropdown)</P>
-<P>This is a new feature (Button)</P>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator-card">
+            <div class="header">
+                <i class="fas fa-birthday-cake"></i>
+                <h1>Age Calculator</h1>
+                <p>Calculate your exact age in years, months, and days</p>
+            </div>
+            
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="birthdate">Select your birth date:</label>
+                    <div class="date-input-wrapper">
+                        <i class="fas fa-calendar-alt"></i>
+                        <input type="date" id="birthdate" name="birthdate">
+                    </div>
+                </div>
+                
+                <button id="calculateBtn" class="calculate-btn">
+                    <i class="fas fa-calculator"></i>
+                    Calculate Age
+                </button>
+            </div>
+            
+            <div id="result" class="result-section hidden">
+                <div class="age-display">
+                    <div class="age-item">
+                        <span id="years" class="age-number">0</span>
+                        <span class="age-label">Years</span>
+                    </div>
+                    <div class="age-item">
+                        <span id="months" class="age-number">0</span>
+                        <span class="age-label">Months</span>
+                    </div>
+                    <div class="age-item">
+                        <span id="days" class="age-number">0</span>
+                        <span class="age-label">Days</span>
+                    </div>
+                </div>
+                
+                <div class="additional-info">
+                    <div class="info-item">
+                        <i class="fas fa-globe"></i>
+                        <span>Total days lived: <strong id="totalDays">0</strong></span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Total hours lived: <strong id="totalHours">0</strong></span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>Next birthday in: <strong id="nextBirthday">-</strong></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="error" class="error-message hidden">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span id="errorText">Please select a valid birth date</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
 
